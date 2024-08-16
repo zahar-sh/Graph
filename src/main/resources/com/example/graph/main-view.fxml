@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="root" prefHeight="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.graph.controller.MainController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <Canvas fx:id="canvas" focusTraversable="true" height="560.0" width="560.0"
+                        AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0"
+                        AnchorPane.topAnchor="8.0"/>
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+            <content>
+                <GridPane hgap="4.0" vgap="4.0">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Add"/>
+                        <Label text="Remove" GridPane.rowIndex="1"/>
+                        <Label text="Rename" GridPane.rowIndex="2"/>
+                        <Label text="Contains" GridPane.rowIndex="3"/>
+                        <Label text="Contains node" GridPane.rowIndex="4"/>
+                        <Label text="Contains weight" GridPane.rowIndex="5"/>
+                        <Label text="Get" GridPane.rowIndex="6"/>
+                        <Label text="Put" GridPane.rowIndex="7"/>
+                        <Label text="Remove" GridPane.rowIndex="8"/>
+                        <Label text="Get children" GridPane.rowIndex="9"/>
+                        <Label text="Get parents" GridPane.rowIndex="10"/>
+                        <Label text="Clear children" GridPane.rowIndex="11"/>
+                        <Label text="Clear parents" GridPane.rowIndex="12"/>
+                        <Label text="Clear" GridPane.rowIndex="13"/>
+                        <Label text="Paths" GridPane.rowIndex="14"/>
+                        <Label text="Path" GridPane.rowIndex="15"/>
+                        <Label text="Min path" GridPane.rowIndex="16"/>
+                        <Label text="Center" GridPane.rowIndex="17"/>
+                        <Label text="Links" GridPane.rowIndex="18"/>
+                        <Label text="Node size" GridPane.rowIndex="19"/>
+                        <Label text="Node color" GridPane.rowIndex="20"/>
+                        <Label text="Selected color" GridPane.rowIndex="21"/>
+                        <Label text="Arrow size" GridPane.rowIndex="22"/>
+                        <Label text="Arrow position" GridPane.rowIndex="23"/>
+                        <Label text="Weight position" GridPane.rowIndex="24"/>
+                        <Label text="Line width" GridPane.rowIndex="25"/>
+                        <TextField fx:id="addTextField" GridPane.columnIndex="1"/>
+                        <TextField fx:id="removeTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.hgrow="NEVER" GridPane.rowIndex="2">
+                            <children>
+                                <TextField fx:id="renameFromTextField"/>
+                                <TextField fx:id="renameToTextField"/>
+                            </children>
+                        </HBox>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="3">
+                            <children>
+                                <TextField fx:id="containsFromTextField"/>
+                                <TextField fx:id="containsToTextField"/>
+                            </children>
+                        </HBox>
+                        <TextField fx:id="containsNodeTextField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <TextField fx:id="containsWeightTextField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="6">
+                            <children>
+                                <TextField fx:id="getFromTextField"/>
+                                <TextField fx:id="getToTextField"/>
+                            </children>
+                        </HBox>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="7">
+                            <children>
+                                <TextField fx:id="putFromTextField"/>
+                                <TextField fx:id="putToTextField"/>
+                                <TextField fx:id="putWeightTextField"/>
+                            </children>
+                        </HBox>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="8">
+                            <children>
+                                <TextField fx:id="removeFromTextField"/>
+                                <TextField fx:id="removeToTextField"/>
+                            </children>
+                        </HBox>
+                        <TextField fx:id="getChildrenTextField" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+                        <TextField fx:id="getParentsTextField" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+                        <TextField fx:id="clearChildrenTextField" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+                        <TextField fx:id="clearParentsTextField" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="13">
+                            <children>
+                                <Button fx:id="clearEdgesButton" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" text="Clear edges" HBox.hgrow="ALWAYS"/>
+                                <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        text="Clear" HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="14">
+                            <children>
+                                <TextField fx:id="pathsFromTextField"/>
+                                <TextField fx:id="pathsToTextField"/>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="pathComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1"
+                                  GridPane.rowIndex="15"/>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="16">
+                            <children>
+                                <TextField fx:id="minPathFromTextField"/>
+                                <TextField fx:id="minPathToTextField"/>
+                            </children>
+                        </HBox>
+                        <ToggleButton fx:id="centerButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                      text="Center" GridPane.columnIndex="1" GridPane.rowIndex="17"/>
+                        <ToggleButton fx:id="linksButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                      text="Links" GridPane.columnIndex="1" GridPane.rowIndex="18"/>
+
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="19">
+                            <children>
+                                <TextField fx:id="nodeWidthTextField"/>
+                                <TextField fx:id="nodeHeightTextField"/>
+                            </children>
+                        </HBox>
+                        <ColorPicker fx:id="nodeColorColorPicker" maxWidth="1.7976931348623157E308"
+                                     GridPane.columnIndex="1" GridPane.rowIndex="20"/>
+                        <ColorPicker fx:id="selectedColorPicker" maxWidth="1.7976931348623157E308"
+                                     GridPane.columnIndex="1" GridPane.rowIndex="21"/>
+                        <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1"
+                              GridPane.rowIndex="22">
+                            <children>
+                                <TextField fx:id="arrowWidthTextField"/>
+                                <TextField fx:id="arrowHeightTextField"/>
+                            </children>
+                        </HBox>
+                        <TextField fx:id="arrowPosFactorTextField" GridPane.columnIndex="1" GridPane.rowIndex="23"/>
+                        <TextField fx:id="weightPosFactorTextField" GridPane.columnIndex="1" GridPane.rowIndex="24"/>
+                        <TextField fx:id="lineWidthTextField" GridPane.columnIndex="1" GridPane.rowIndex="25"/>
+                    </children>
+                </GridPane>
+            </content>
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </ScrollPane>
+    </right>
+</BorderPane>
